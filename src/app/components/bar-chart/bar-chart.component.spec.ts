@@ -6,7 +6,8 @@ import { IonicModule } from '@ionic/angular';
 import { BarChartComponent } from './bar-chart.component';
 //import { HttpClientModule } from '@angular/common/http';
 import { BehaviorSubject } from 'rxjs';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { HttpTestingController } from '@angular/common/http/testing';
+import { provideHttpClient } from '@angular/common/http';
 
 describe('BarChartComponent', () => {
   let component: BarChartComponent;
@@ -34,7 +35,7 @@ describe('BarChartComponent', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ BarChartComponent ],
-      imports: [IonicModule.forRoot(), HttpClientTestingModule],
+      imports: [IonicModule.forRoot()],
       providers: [{
         provide: GestionApiService,
         useValue: { datos$: fakeSubject, mockGestionService}

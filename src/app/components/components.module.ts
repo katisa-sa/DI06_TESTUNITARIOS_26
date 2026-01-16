@@ -19,6 +19,6 @@ import { TablePipePipe } from '../pipes/table-pipe.pipe';
   ],
   exports: [
     BarChartComponent, LineChartComponent, PieChartComponent, TablasComponent
-  ]
+  ],
 })
 export class ComponentsModule { }
